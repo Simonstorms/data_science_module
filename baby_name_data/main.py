@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 df = pd.read_csv('yob/yob2021.txt', names=['Name', 'Gender', 'Quantity'], header=None)
 
 # print("First ten rows: \n ", df.head(10))
-
 # print("Number of rows and columns: \n ", df.shape)
 
 # print("total number of babies: \n ", df["Name"].count())
