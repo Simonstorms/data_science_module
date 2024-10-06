@@ -47,13 +47,15 @@ all_data['LastLetter'] = all_data['Name'].str[-1]
 
 
 
-### Heatmap of first and last letters
-all_data['Name'] = all_data['Name'].str.upper()
-all_data['FirstLetter'] = all_data['Name'].str[0]
-all_data['LastLetter'] = all_data['Name'].str[-1]
-crosstab = pd.crosstab(all_data['FirstLetter'], all_data['LastLetter'], values=all_data['Count'], aggfunc='sum')
-crosstab = crosstab.sort_index(axis=0)
+### Heatmap of first and last letters and save as png
+# all_data['Name'] = all_data['Name'].str.upper()
+# all_data['FirstLetter'] = all_data['Name'].str[0]
+# all_data['LastLetter'] = all_data['Name'].str[-1]
+# crosstab = pd.crosstab(all_data['FirstLetter'], all_data['LastLetter'], values=all_data['Count'], aggfunc='sum')
+# crosstab = crosstab.sort_index(axis=0)
+#
+# print(crosstab)
+# sns.heatmap(crosstab)
+# plt.savefig('first_last_letter_heatmap.png', dpi=150)
+# plt.show()
 
-print(crosstab)
-sns.heatmap(crosstab)
-plt.show()
